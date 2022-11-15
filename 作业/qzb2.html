@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<!--产生随机值-->
+<input type="text" id="text1" value="">
+<span id="span">+</span>
+<input type="text" id="text2" value="">
+<br/>
+<br/>
+
+A:<input type="button" id="but1" value="20" onclick=but1()>
+B:<input type="button" id="but2" value="20" onclick=but2()>
+C:<input type="button" id="but3" value="20" onclick=but3()>
+D:<input type="button" id="but4" value="20" onclick=but4()>
+<br/>
+<input type="button" value="点击随机生成" onclick=but5()>
+
+</body>
+
+<script>
+    let number1;
+    let number2;
+    let number3; 
+    but5 = function () {
+        number1 = Math.floor(Math.random() * 20);
+        number2 = Math.floor(Math.random() * 20);
+        document.getElementById("text1").value = number1;
+        document.getElementById("text2").value = number2;
+        number3 = Math.ceil(Math.random() * 4);
+        document.getElementById("but" + number3).value = number1 + number2;
+        if (1 != number3) {
+            document.getElementById("but1").value = Math.floor(Math.random() * 20);
+        }
+        if (2 != number3) {
+            document.getElementById("but2").value = Math.floor(Math.random() * 20);
+        }
+        if (3 != number3) {
+            document.getElementById("but3").value = Math.floor(Math.random() * 20);
+        }
+        if (4 != number3) {
+            document.getElementById("but4").value = Math.floor(Math.random() * 20);
+        }
+    }
+
+    but1 = function () {
+        if (document.getElementById("but1").value != (number1 + number2)) {
+            alert("你答错了")
+        } else {
+            alert("你答对了")
+
+        }
+    }
+    but2 = function () {
+        if (document.getElementById("but2").value != (number1 + number2)) {
+            alert("你答错了")
+        } else {
+            alert("你答对了")
+
+        }
+    }
+    but3 = function () {
+        if (document.getElementById("but3").value != (number1 + number2)) {
+            alert("你答错了")
+        } else {
+            alert("你答对了")
+
+        }
+    }
+    but4 = function () {
+        if (document.getElementById("but4").value != (number1 + number2)) {
+            alert("你答错了")
+        } else {
+            alert("你答对了")
+        }
+    }
+</script>
+</html>
